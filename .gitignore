@@ -1,12 +1,11 @@
-# Consolidated .gitignore for this Python/Streamlit project
-
-# Byte-compiled / optimized / DLL files
+# ...existing code...
+# Python compiled files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 
-# Distribution / packaging
+# Build / packaging
 build/
 dist/
 *.egg-info/
@@ -17,29 +16,11 @@ pip-wheel-metadata/
 venv/
 env/
 .venv/
-.Python
 
-# Environment files / secrets
+# Environment files
 .env
-.env.*
 .env.local
-
-# Streamlit secrets / credentials
-.streamlit/secrets.toml
-.streamlit/credentials.toml
-
-# Firebase / service account keys (private)
-firebase-credentials.json
-serviceAccountKey.json
-firebase_key.json
-google-service-account.json
-credentials.json
-google-credentials.json
-secrets.json
-
-# Private keys
-*.key
-*.pem
+.env.*
 
 # IDEs / editors
 .vscode/
@@ -55,10 +36,30 @@ Thumbs.db
 *.log
 .pytest_cache/
 .coverage
-coverage.xml
 htmlcov/
+coverage.xml
 
-# Caches & tool outputs
+# Streamlit secrets / credentials
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# Firebase / service account keys (private)
+firebase-credentials.json
+serviceAccountKey.json
+firebase_key.json
+google-service-account.json
+
+# Generated / runtime data
+data/
+app/data/
+reports/
+*.pdf
+*.html
+
+# Docker / compose local overrides
+docker-compose.override.yml
+
+# Python tooling caches
 .mypy_cache/
 .pyre/
 .cache/
@@ -68,29 +69,5 @@ pip-log.txt
 *.sqlite3
 *.db
 
-# Notebook checkpoints
-.ipynb_checkpoints/
-
-# Docker / compose local overrides
-docker-compose.override.yml
-
-# Generated / runtime data and reports (optional)
-data/
-app/data/
-reports/
-*.pdf
-*.html
-
-# Node / frontend
-node_modules/
-
-# HuggingFace cache
-.huggingface/
-.hf/
-
-# Misc
-*.bak
-*.swp
-*.tmp
-
-# End of file
+# NOTE: keep tests tracked (removed from ignore)
+# test_analytics.py# Additional common ignores\r\nnode_modules/\r\n.python-version\r\n.huggingface/\r\n.hf/\r\nsecrets.json\r\ncredentials.json\r\ngoogle-credentials.json\r\n*.key\r\n*.pem\r\n.env.*.local\r\n\r\n# End of .gitignore\r\n
